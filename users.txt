@@ -1,0 +1,42 @@
+resource "aws_vpc" "main1" {
+  cidr_block = "30.0.0.0/16"
+
+
+  tags = {
+    Name = "main"
+  }
+}
+
+
+resource "aws_iam_user" "skuser" {
+  name = "sackol"
+  
+
+  tags = {
+    tag-key = "my_user"
+  }
+}
+
+
+
+
+resource "aws_iam_user" "skuser1" {
+  name = "sackol1"
+  count = 5
+  
+
+  tags = {
+    tag-key = "my_user"
+    
+  }
+}
+
+
+resource "aws_s3_bucket" "spbucket" {
+  bucket = "sp-bucket"
+
+  tags = {
+    Name        = "sp bucket"
+
+  }
+}
