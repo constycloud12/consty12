@@ -1,0 +1,11 @@
+variable "my-vpc" {
+    description = "my vpc name"
+    default = "main"
+  
+}
+
+variable "my-cidr"  {
+    description = "my vpc cidr"
+    default = "30.0.0.0/16"
+}
+  
